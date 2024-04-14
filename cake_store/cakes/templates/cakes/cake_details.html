@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ tort.name }}</title>
+    <link rel="stylesheet" href="{% static 'cakes/style.css' %}">
+    <script src="{% static 'cakes/script.js' %}"></script>
+</head>
+<body>
+    <div class="container" style="display: flex;">
+        <img src="{{ tort.image_url }}" width="300px" alt="cake picture" class="img">
+        <table class="table">
+            <tr>
+              <td>Cake name</td>
+              <td>{{ tort.name }}</td>
+            </tr>
+            <tr>
+              <td>Cake weight</td>
+              <td>{{ tort.weight }}</td>
+            </tr>
+            <tr>
+              <td>Cake price</td>
+              <td>{{ tort.price }}</td>
+            </tr>
+            <tr>
+              <td>Cake baked at</td>
+              <td>{{ tort.baked_at }}</td>
+            </tr>
+          </table>
+    </div>
+    <div class="ingredients">
+        <h1>Ingredients</h1>
+        <h2>{{ tort.ingredient }}</h2>
+        <h3>thank for choosing us</h3>
+    </div>
+    <button class="button1"><a href="/" style="text-decoration: none;">click for return to home</a></button>
+</body>
+</html>
